@@ -1,2 +1,10 @@
 server:
-  port: 8080
+  port: 443
+  ssl:
+    enabled: true
+    enabled-protocols:
+      - TLSv1.1
+      - TLSv1.2
+    key-store: "/etc/pki/tls/certs/test.p12"
+    key-store-password: "rlawlaud"
+    key-store-type: "PKCS12"
